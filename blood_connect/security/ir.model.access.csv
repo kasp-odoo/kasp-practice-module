@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+blood_connect.access_blood_connect_request,access_blood_connect_request,blood_connect.model_blood_connect_request,base.group_user,1,1,1,1
+blood_connect.access_blood_connect_donor,access_blood_connect_donor,blood_connect.model_blood_connect_donor,base.group_user,1,1,1,1
+blood_connect.access_blood_connect_patient,access_blood_connect_patient,blood_connect.model_blood_connect_patient,base.group_user,1,1,1,1
