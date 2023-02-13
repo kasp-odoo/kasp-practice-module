@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- List/Tree View -->
+    <record id="blood_connect_order_tree_view" model="ir.ui.view">
+        <field name="name">Blood Connect Order Tree View</field>
+        <field name="model">blood.connect.order</field>
+        <field name="arch" type="xml">
+            <tree string="tree_view">
+                <field name="order_id"/>
+                <field name="order_date"/>
+                <field name="blood_unit"/>
+                <field name="blood_group"/>
+                <field name="name"/>
+                <field name="delivery_date"/>
+                <field name="delivery_loc"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+    <!-- Form View -->
+    <record id="blood_connect_order_form_view" model="ir.ui.view">
+        <field name="name">Blood Connect Order Form View</field>
+        <field name="model">blood.connect.order</field>
+        <field name="arch" type="xml">
+            <form string="form_view">
+                <header>
+                    <field name="state" widget="statusbar" options="{'clickable':'1'}"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="order_id"/>
+                        <field name="order_date"/>
+                        <field name="blood_unit"/>
+                        <field name="blood_group"/>
+                        <field name="name"/>
+                        <field name="delivery_date"/>
+                        <field name="delivery_loc"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- Action Menu -->
+    <record id="blood_connect_order_action" model="ir.actions.act_window">
+        <field name="name">Orders</field>
+        <field name="res_model">blood.connect.order</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                There is no new blood order!!
+            </p>
+        </field>
+    </record>
+</odoo>

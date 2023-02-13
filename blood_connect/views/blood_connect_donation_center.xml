@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- List/Tree View -->
+    <record id="blood_connect_donation_center_tree_view" model="ir.ui.view">
+        <field name="name">Blood Connect Donation Center Tree View</field>
+        <field name="model">blood.connect.donation.center</field>
+        <field name="arch" type="xml">
+            <tree string="tree_view">
+                <field name="name"/>
+                <field name="address" optional="hide"/>
+                <field name="contact"/>
+                <field name="capacity"/>
+                <field name="blood_group"/>
+            </tree>
+        </field>
+    </record>
+    <!-- Form View -->
+    <record id="blood_connect_donation_center_form_view" model="ir.ui.view">
+        <field name="name">Blood Connect Donation Center Form View</field>
+        <field name="model">blood.connect.donation.center</field>
+        <field name="arch" type="xml">
+            <form string="form_view">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="address" optional="hide"/>
+                        <field name="contact"/>
+                        <field name="capacity"/>
+                        <field name="blood_group"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- Action Menu -->
+    <record id="blood_connect_donation_center_action" model="ir.actions.act_window">
+        <field name="name">Donation Centers</field>
+        <field name="res_model">blood.connect.donation.center</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                There is no donation center!!
+            </p>
+        </field>
+    </record>
+</odoo>

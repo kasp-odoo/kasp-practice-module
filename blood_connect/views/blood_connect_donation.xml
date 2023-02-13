@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- List/Tree View -->
+    <record id="blood_connect_donation_tree_view" model="ir.ui.view">
+        <field name="name">Blood Connect Donation Tree View</field>
+        <field name="model">blood.connect.donation</field>
+        <field name="arch" type="xml">
+            <tree string="tree_view">
+                <field name="donated_quantity"/>
+                <field name="donation_date"/>
+                <field name="test_results"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+    <!-- Form View -->
+    <record id="blood_connect_donation_form_view" model="ir.ui.view">
+        <field name="name">Blood Connect Donation Form View</field>
+        <field name="model">blood.connect.donation</field>
+        <field name="arch" type="xml">
+            <form string="form_view">
+                <header>
+                    <field name="state" widget="statusbar" options="{'clickable':'1'}"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="donated_quantity"/>
+                        <field name="donation_date"/>
+                        <field name="test_results"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- Action Menu -->
+    <record id="blood_connect_donation_action" model="ir.actions.act_window">
+        <field name="name">Blood Donations</field>
+        <field name="res_model">blood.connect.donation</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                There is no blood donation!!
+            </p>
+        </field>
+    </record>
+</odoo>

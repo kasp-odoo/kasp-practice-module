@@ -24,12 +24,12 @@ class BloodConnectRequest(models.Model):
             ('ab-','AB-'),
         ], required=True) # Can also done with blood_group model
     quantity = fields.Integer(required=True, string='Required Blood Units', default=1)
-    date = fields.Date(string='Request Date',default=lambda self: fields.Date.today())
+    date = fields.Date(string='Request Date', default=lambda self: fields.Date.today())
     state = fields.Selection(
         selection = [('new','New'),
                      ('pending','Pending'),
                      ('fulfilled','Fulfilled'),
-                     ('canceled','Canceled')], string='State', default="new", copy=False)
+                     ('cancelled','Cancelled')], string='State', default="new", copy=False)
 
     
     

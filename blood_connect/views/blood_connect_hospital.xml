@@ -23,6 +23,7 @@
                         <field name="name"/>
                         <field name="contact"/>
                         <field name="address"/>
+                        <field name="donation_center"/>
                     </group>
                 </sheet>
             </form>
