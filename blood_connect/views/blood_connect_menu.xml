@@ -3,7 +3,7 @@
     <menuitem id="blood_connect_menu_root" name="Blood Connect">
         <!-- Requests -->
         <menuitem id="blood_connect_req_order_menu" name="Requests">
-            <menuitem id="blood_connect_order_menu" name="Orders" action="blood_connect_order_action"></menuitem>
+            <menuitem id="blood_connect_order_menu" name="Order" action="blood_connect_order_action"></menuitem>
             <menuitem id="blood_connect_request_menu" name="Request" action="blood_connect_request_action"></menuitem>
         </menuitem>
         <!-- Details -->

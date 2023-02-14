@@ -2,8 +2,8 @@
 from odoo import fields, models
 
 
-class BloodConnectBloodType(models.Model):
-    _name = "blood.connect.blood.type"
+class BloodType(models.Model):
+    _name = "blood.type"
     _description = "Blood Connect Blood Type Model"
     _rec_name = "blood_type"
 
@@ -20,6 +20,6 @@ class BloodConnectBloodType(models.Model):
         ], string='Blood Type', required=True)
     # Code of blood group
     description = fields.Text(string='Description')
-    donate_blood_to = fields.Char(string='Donate Blood To', required=True)
+    donate_blood_to = fields.Char(string='Donate Blood To') # required=True
     receive_blood_from = fields.Char(
-        string='Receive Blood From', required=True)
+        string='Receive Blood From') # required=True

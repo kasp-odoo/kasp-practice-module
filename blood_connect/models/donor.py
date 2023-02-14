@@ -1,7 +1,9 @@
-from odoo import fields,models
+# -*- coding: utf-8 -*-
+from odoo import fields, models
 
-class BloodConnectDonor(models.Model):
-    _name = "blood.connect.donor"
+
+class Donor(models.Model):
+    _name = "donor.donor"
     _description = "Blood Connect Donor Model"
 
     name = fields.Char(string='Donor Name', required=True)
@@ -13,16 +15,6 @@ class BloodConnectDonor(models.Model):
         ('female', 'Female'),
         ('other', 'Other'),
     ], string='Gender', required=True)
-    blood_group = fields.Selection(
-        selection = [
-            ('a+','A+'),
-            ('o+','O+'),
-            ('b+','B+'),
-            ('ab+','AB+'),
-            ('a-','A-'),
-            ('o-','O-'),
-            ('b-','B-'),
-            ('ab-','AB-'),
-        ], required=True)
+    blood_group = fields.Many2one('blood.type', string='Blood Group')
     # donor ID
     health_info = fields.Text(string='Health Information')

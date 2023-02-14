@@ -3,7 +3,7 @@
     <!-- List/Tree View -->
     <record id="blood_connect_donor_tree_view" model="ir.ui.view">
         <field name="name">Blood Connect Donor Tree View</field>
-        <field name="model">blood.connect.donor</field>
+        <field name="model">donor.donor</field>
         <field name="arch" type="xml">
             <tree string="tree_view">
                 <field name="name"/>
@@ -18,7 +18,7 @@
     <!-- Form View -->
     <record id="blood_connect_donor_form_view" model="ir.ui.view">
         <field name="name">Blood Connect Donor Form View</field>
-        <field name="model">blood.connect.donor</field>
+        <field name="model">donor.donor</field>
         <field name="arch" type="xml">
             <form string="form_view">
                 <sheet>
@@ -38,7 +38,7 @@
     <!-- Action Menu -->
     <record id="blood_connect_donor_action" model="ir.actions.act_window">
         <field name="name">Donors</field>
-        <field name="res_model">blood.connect.donor</field>
+        <field name="res_model">donor.donor</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">

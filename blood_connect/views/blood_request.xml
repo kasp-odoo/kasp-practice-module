@@ -3,7 +3,7 @@
     <!-- List/Tree View -->
     <record id="blood_connect_request_tree_view" model="ir.ui.view">
         <field name="name">Blood Connect Request Tree View</field>
-        <field name="model">blood.connect.request</field>
+        <field name="model">blood.request</field>
         <field name="arch" type="xml">
             <tree string="tree_view">
                 <field name="name"/>
@@ -19,7 +19,7 @@
     <!-- Form View -->
     <record id="blood_connect_request_form_view" model="ir.ui.view">
         <field name="name">Blood Connect Request Form View</field>
-        <field name="model">blood.connect.request</field>
+        <field name="model">blood.request</field>
         <field name="arch" type="xml">
             <form string="form_view">
                 <header>
@@ -42,7 +42,7 @@
     <!-- Action Menu -->
     <record id="blood_connect_request_action" model="ir.actions.act_window">
         <field name="name">Requests</field>
-        <field name="res_model">blood.connect.request</field>
+        <field name="res_model">blood.request</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
