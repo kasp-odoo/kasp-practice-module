@@ -17,8 +17,8 @@
         'views/blood_order.xml',
         'views/donation_center.xml',
         'views/blood_type.xml',
-        # 'views/donation_request.xml',
-        # 'views/blood_inventory.xml',
+        'views/blood_inventory.xml',
+        'views/donation_request.xml',
         'views/blood_connect_menu.xml',
     ],
 }

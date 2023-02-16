@@ -13,8 +13,6 @@ class Donor(models.Model):
     gender = fields.Selection([
         ('male', 'Male'),
         ('female', 'Female'),
-        ('other', 'Other'),
-    ], string='Gender', required=True)
+        ('other', 'Other')], string='Gender', required=True)
     blood_group = fields.Many2one('blood.type', string='Blood Group')
-    # donor ID
     health_info = fields.Text(string='Health Information')

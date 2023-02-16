@@ -22,15 +22,32 @@
         <field name="arch" type="xml">
             <form string="form_view">
                 <sheet>
+                    <div>
+                        <label for="name" string="Donor Name"/>
+                        <h1>
+                            <field name="name"></field>
+                        </h1>
+                    </div>
                     <group>
-                        <field name="name"/>
-                        <field name="phone"/>
-                        <field name="address"/>
-                        <field name="age"/>
-                        <field name="gender"/>
-                        <field name="blood_group"/>
-                        <field name="health_info"/>
+                        <group>
+                            <field name="phone"/>
+                            <field name="address"/>
+                            <field name="age"/>
+                        </group>
+                        <group>
+                            <field name="gender"/>
+                            <field name="blood_group"/>
+                        </group>
                     </group>
+                    <notebook>
+                        <page string="Health Info">
+                            <label for="health_info" string="Health Information"/>
+                            <field name="health_info"/>
+                        </page>
+                        <page string="Donation History">
+
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>

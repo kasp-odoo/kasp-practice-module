@@ -7,5 +7,5 @@ from . import blood_order
 from . import blood_donation
 from . import donation_center
 from . import blood_type
-# from . import donation_request
-# from . import blood_inventory
+from . import blood_inventory
+from . import donation_request

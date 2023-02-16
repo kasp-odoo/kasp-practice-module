@@ -7,10 +7,11 @@
         <field name="arch" type="xml">
             <tree string="tree_view">
                 <field name="name"/>
-                <field name="address" optional="hide"/>
+                <field name="address"/>
+                <field name="city"/>
+                <field name="state"/>
                 <field name="contact"/>
                 <field name="capacity"/>
-                <field name="blood_group"/>
             </tree>
         </field>
     </record>
@@ -21,13 +22,33 @@
         <field name="arch" type="xml">
             <form string="form_view">
                 <sheet>
+                    <div>
+                        <label for="name" string="Donation Center Name"/>
+                        <h1>
+                            <field name="name"></field>
+                        </h1>
+                    </div>
                     <group>
-                        <field name="name"/>
-                        <field name="address" optional="hide"/>
-                        <field name="contact"/>
-                        <field name="capacity"/>
-                        <field name="blood_group"/>
+                        <group>
+                            <field name="address"/>
+                            <field name="city"/>
+                            <field name="state"/>
+                            <field name="zip_code"/>
+                        </group>
+                        <group>
+                            <field name="contact"/>
+                            <field name="email"/>
+                            <field name="capacity"/>
+                        </group>
                     </group>
+                    <notebook>
+                        <page string="Donation Requests">
+
+                        </page>
+                        <page string="Blood Orders">
+
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>

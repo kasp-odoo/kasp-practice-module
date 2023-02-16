@@ -14,12 +14,11 @@ class BloodRequest(models.Model):
     name = fields.Char(required=True)
     address = fields.Text(required=True)
     blood_group = fields.Many2one('blood.type', string='Blood Group')
-    quantity = fields.Integer(
-        required=True, string='Required Blood Units', default=1)
-    date = fields.Date(string='Request Date',
-                       default=lambda self: fields.Date.today())
+    quantity = fields.Integer(required=True, string='Required Blood Units', default=1)
+    hospital = fields.Many2one('hospital.hospital', string='Hospital')
+    date = fields.Date(string='Request Date', default=lambda self: fields.Date.today())
     state = fields.Selection(
         selection=[('new', 'New'),
                    ('pending', 'Pending'),
-                   ('fulfilled', 'Fulfilled'),
+                   ('approved', 'Approved'),
                    ('cancelled', 'Cancelled')], string='State', default="new", copy=False)

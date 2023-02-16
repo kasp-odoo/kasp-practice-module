@@ -6,7 +6,7 @@
         <field name="model">blood.order</field>
         <field name="arch" type="xml">
             <tree string="tree_view">
-                <field name="order_id"/>
+                <!-- <field name="order_id"/> -->
                 <field name="order_date"/>
                 <field name="blood_unit"/>
                 <field name="blood_group"/>
@@ -28,7 +28,7 @@
                 </header>
                 <sheet>
                     <group>
-                        <field name="order_id"/>
+                        <!-- <field name="order_id"/> -->
                         <field name="order_date"/>
                         <field name="blood_unit"/>
                         <field name="blood_group"/>

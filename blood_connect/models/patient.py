@@ -13,9 +13,9 @@ class Patient(models.Model):
     gender = fields.Selection([
         ('male', 'Male'),
         ('female', 'Female'),
-        ('other', 'Other'),
-    ], string='Gender', required=True)
+        ('other', 'Other')], string='Gender', required=True)
     blood_group = fields.Many2one('blood.type', string='Blood Group')
-    # patient ID
-    health_info = fields.Text(
-        string='Health Information (Reason)', required=True)
+    health_info = fields.Text(required=True)
+    
+# Add Health information page
+# Add order history page

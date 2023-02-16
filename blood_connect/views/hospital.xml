@@ -7,7 +7,12 @@
         <field name="arch" type="xml">
             <tree string="tree_view">
                 <field name="name"/>
+                <field name="address"/>
+                <field name="city"/>
+                <field name="state"/>
+                <field name="zip_code"/>
                 <field name="contact"/>
+                <field name="website"/>
                 <field name="address" optional="hide"/>
             </tree>
         </field>
@@ -19,12 +24,32 @@
         <field name="arch" type="xml">
             <form string="form_view">
                 <sheet>
+                    <div>
+                        <label for="name" string="Hospital Name"/>
+                        <h1>
+                            <field name="name"></field>
+                        </h1>
+                    </div>
                     <group>
-                        <field name="name"/>
-                        <field name="contact"/>
-                        <field name="address"/>
-                        <field name="donation_center"/>
+                        <group>
+                            <field name="address"/>
+                            <field name="city"/>
+                            <field name="state"/>
+                            <field name="zip_code"/>
+                        </group>
+                        <group>
+                            <field name="contact"/>
+                            <field name="website"/>
+                        </group>
                     </group>
+                    <notebook>
+                        <page string="Patient Blood Requests">
+
+                        </page>
+                        <page string="Blood Orders">
+
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>

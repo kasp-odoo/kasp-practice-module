@@ -6,8 +6,8 @@ class BloodOrder(models.Model):
     _name = "blood.order"
     _description = "Blood Connect Order Model"
 
-    order_id = fields.Char(string='Order ID', required=True)
-    order_date = fields.Date(string='Order Date', required=True)
+    # order_id = fields.Char(string='Order ID', required=True)
+    order_date = fields.Date(string='Order Date', required=True, readonly=True)
     blood_unit = fields.Integer(string='Blood Unit(s)', required=True)
     blood_group = fields.Many2one('blood.type', string='Blood Group')
     name = fields.Char(string='Patient/Hospital Name', required=True)

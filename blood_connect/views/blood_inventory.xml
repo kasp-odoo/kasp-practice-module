@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- List/Tree View -->
+    <record id="blood_connect_inventory_tree_view" model="ir.ui.view">
+        <field name="name">Blood Connect Inventory Tree View</field>
+        <field name="model">blood.inventory</field>
+        <field name="arch" type="xml">
+            <tree string="tree_view">
+                <field name="blood_group"/>
+                <field name="quantity"/>
+                <field name="donation_date"/>
+                <field name="expiration_date"/>
+                <field name="donation_center"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+    <!-- Form View -->
+    <record id="blood_connect_inventory_form_view" model="ir.ui.view">
+        <field name="name">Blood Connect Inventory Form View</field>
+        <field name="model">blood.inventory</field>
+        <field name="arch" type="xml">
+            <form string="form_view">
+                <header>
+                    <field name="status" widget="statusbar" options="{'clickable':'1'}"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="blood_group"/>
+                        <field name="quantity"/>
+                        <field name="donation_date"/>
+                        <field name="expiration_date"/>
+                        <field name="donation_center"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- Action Menu -->
+    <record id="blood_connect_inventory_action" model="ir.actions.act_window">
+        <field name="name">Blood Inventory</field>
+        <field name="res_model">blood.inventory</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                There is no blood stock info!!
+            </p>
+        </field>
+    </record>
+</odoo>

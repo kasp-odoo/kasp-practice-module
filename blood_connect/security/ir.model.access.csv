@@ -7,3 +7,5 @@ blood_connect.access_blood_donation,access_blood_donation,blood_connect.model_bl
 blood_connect.access_blood_order,access_blood_order,blood_connect.model_blood_order,base.group_user,1,1,1,1
 blood_connect.access_donation_center,access_donation_center,blood_connect.model_donation_center,base.group_user,1,1,1,1
 blood_connect.access_blood_type,access_blood_type,blood_connect.model_blood_type,base.group_user,1,1,1,1
+blood_connect.access_blood_inventory,access_blood_inventory,blood_connect.model_blood_inventory,base.group_user,1,1,1,1
+blood_connect.access_donation_request,access_donation_request,blood_connect.model_donation_request,base.group_user,1,1,1,1

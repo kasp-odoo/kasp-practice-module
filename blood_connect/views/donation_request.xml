@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- List/Tree View -->
+    <record id="blood_connect_donation_request_tree_view" model="ir.ui.view">
+        <field name="name">Blood Connect Donation Request Tree View</field>
+        <field name="model">donation.request</field>
+        <field name="arch" type="xml">
+            <tree string="tree_view">
+                <field name="donor_name"/>
+                <field name="blood_group"/>
+                <field name="appointment_date"/>
+                <field name="donation_center"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+    <!-- Form View -->
+    <record id="blood_connect_donation_request_form_view" model="ir.ui.view">
+        <field name="name">Blood Connect Donation Request Form View</field>
+        <field name="model">donation.request</field>
+        <field name="arch" type="xml">
+            <form string="form_view">
+                <header>
+                    <field name="status" widget="statusbar" options="{'clickable':'1'}"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="donor_name"/>
+                        <field name="blood_group"/>
+                        <field name="appointment_date"/>
+                        <field name="donation_center"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- Action Menu -->
+    <record id="blood_connect_donation_request_action" model="ir.actions.act_window">
+        <field name="name">Donation Requests</field>
+        <field name="res_model">donation.request</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                There is no donation request!!
+            </p>
+        </field>
+    </record>
+</odoo>
