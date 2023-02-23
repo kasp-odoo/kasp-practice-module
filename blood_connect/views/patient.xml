@@ -9,6 +9,8 @@
                 <field name="name"/>
                 <field name="phone"/>
                 <field name="address" optional="hide"/>
+                <field name="city" optional="hide"/>
+                <field name="state" optional="hide"/>
                 <field name="age"/>
                 <field name="gender"/>
                 <field name="blood_group"/>
@@ -32,20 +34,25 @@
                         <group>
                             <field name="phone"/>
                             <field name="address"/>
-                            <field name="age"/>
+                            <field name="city"/>
+                            <field name="state"/>
                         </group>
                         <group>
+                            <field name="age"/>
                             <field name="gender"/>
                             <field name="blood_group"/>
                         </group>
                     </group>
                     <notebook>
-                        <page string="Health Info">
-                            <label for="health_info" string="Health Information"/>
-                            <field name="health_info"/>
-                        </page>
-                        <page string="Blood Orders">
-
+                        <page string="Blood Request History">
+                            <field name="blood_request_ids">
+                                <tree>
+                                    <field name="requested_from"/>
+                                    <field name="quantity"/>
+                                    <field name="date"/>
+                                    <field name="state"/>
+                                </tree>
+                            </field>
                         </page>
                     </notebook>
                 </sheet>

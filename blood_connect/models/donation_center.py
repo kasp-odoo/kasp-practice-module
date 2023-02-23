@@ -13,8 +13,11 @@ class DonationCenter(models.Model):
     zip_code = fields.Char(string='Zip Code', required=True)
     contact = fields.Char(string='Contact Number', required=True)
     email = fields.Char()
-    capacity = fields.Integer(string='Capacity', required=True)
+    capacity = fields.Integer(string='Capacity(Units)', required=True)
+    available_blood = fields.Integer(string='Available Units', readonly=True)
     blood_group = fields.Many2one('blood.type', string='Blood Group')
+    order_ids = fields.One2many('blood.request','requested_from')
+    donation_ids = fields.One2many('donation.request','donation_id')
 
 # Donation Requests: One2many Field, to connect with Blood Donation Request model and store the requests for blood donation
 # Blood Transactions: One2many Field, to connect with Blood Transaction model and store the transactions of blood donation and delivery.

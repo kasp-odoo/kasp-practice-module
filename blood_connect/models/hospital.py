@@ -13,8 +13,7 @@ class Hospital(models.Model):
     zip_code = fields.Char(string='Zip Code', required=True)
     contact = fields.Char(string='Contact Number', required=True)
     website = fields.Char()
-    # Blood Stock (One2many)
-    # Orders (One2many)
+    blood_request_ids = fields.One2many('blood.request','hospital_name', readonly=True)
 
 # Patient Blood Requests Page (One2many)
 # Add Orders page (One2many)

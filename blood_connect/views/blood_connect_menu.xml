@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <menuitem id="blood_connect_menu_root" name="Blood Connect">
-        <!-- Requests -->
-        <menuitem id="blood_connect_req_order_menu" name="Requests">
-            <menuitem id="blood_connect_request_menu" name="Request Blood" action="blood_connect_request_action"></menuitem>
-            <menuitem id="blood_connect_order_menu" name="Track Order" action="blood_connect_order_action"></menuitem>
-            <menuitem id="blood_connect_donation_request_menu" name="Blood Donation Request" action="blood_connect_donation_request_action"></menuitem>
-        </menuitem>
-        <!-- Details -->
-        <menuitem id="blood_connect_detail_menu" name="Details">
-            <menuitem id="blood_connect_donor_menu" action="blood_connect_donor_action"></menuitem>
-            <menuitem id="blood_connect_patient_menu" action="blood_connect_patient_action"></menuitem>
-            <menuitem id="blood_connect_hospital_menu" action="blood_connect_hospital_action"></menuitem>
-            <menuitem id="blood_connect_donation_center_menu" action="blood_connect_donation_center_action"></menuitem>
-            <menuitem id="blood_connect_blood_type_menu" action="blood_connect_blood_type_action"></menuitem>
-        </menuitem>
-        <!-- Blood Donation -->
-        <menuitem id="blood_connect_donation_menu" name="Blood Donation Transaction" action="blood_connect_donation_action"></menuitem>
-        <!-- Blood Inventory -->
-        <menuitem id="blood_connect_inventory_menu" name="Blood Inventory" action="blood_connect_inventory_action"></menuitem>
+         <menuitem id="blood_connect_donation_center_menu" action="blood_connect_donation_center_action"></menuitem>
+        <menuitem id="blood_connect_hospital_menu" action="blood_connect_hospital_action"></menuitem>
+        <menuitem id="blood_connect_donor_menu" action="blood_connect_donor_action"></menuitem>
+        <menuitem id="blood_connect_patient_menu" action="blood_connect_patient_action"></menuitem>
+        <menuitem id="blood_connect_blood_type_menu" action="blood_connect_blood_type_action"></menuitem>
     </menuitem>
 </odoo>

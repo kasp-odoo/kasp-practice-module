@@ -39,14 +39,34 @@
                             <field name="contact"/>
                             <field name="email"/>
                             <field name="capacity"/>
+                            <field name="available_blood"/>
                         </group>
                     </group>
                     <notebook>
                         <page string="Donation Requests">
-
+                            <field name="donation_ids">
+                                <tree>
+                                    <field name="donor_name"/>
+                                    <field name="blood_group"/>
+                                    <field name="appointment_date"/>
+                                </tree>
+                            </field>
                         </page>
                         <page string="Blood Orders">
-
+                            <field name="order_ids">
+                                <tree>
+                                    <!-- <field name="name"/> -->
+                                    <field name="patient_name"/>
+                                    <field name="hospital_name"/>
+                                    <field name="request_by"/>
+                                    <field name="blood_group"/>
+                                    <field name="quantity"/>
+                                    <field name="date"/>
+                                    <!-- <field name="city"/> -->
+                                    <!-- <field name="select_state" string="State"/> -->
+                                    <field name="state" string="Status"/>
+                                </tree>
+                            </field>
                         </page>
                     </notebook>
                 </sheet>

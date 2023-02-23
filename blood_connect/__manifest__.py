@@ -6,6 +6,7 @@
     'application':True,
     'installable':True,
     'license':'LGPL-3',
+    'image':['static/description/icon.png'],
     'data':[
         'security/ir.model.access.csv',
 
@@ -14,7 +15,7 @@
         'views/patient.xml',
         'views/hospital.xml',
         'views/blood_donation.xml',
-        'views/blood_order.xml',
+        # 'views/blood_order.xml',
         'views/donation_center.xml',
         'views/blood_type.xml',
         'views/blood_inventory.xml',

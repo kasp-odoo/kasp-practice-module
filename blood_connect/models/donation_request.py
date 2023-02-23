@@ -10,8 +10,9 @@ class DonationRequest(models.Model):
     blood_group = fields.Many2one('blood.type', string='Blood Group', required=True)
     appointment_date = fields.Date(string='Appointment Date', required=True)
     donation_center = fields.Many2one('donation.center', string='Donation Center', required=True)
-    status = fields.Selection(
+    donation_id = fields.Many2one('donation.center')
+    state = fields.Selection(
         selection = [
-            ('pending','Pending'),
+            ('new','New'),
             ('approved','Approved'),
-            ('rejected','Rejected')], default='pending')
+            ('rejected','Rejected')], default='new', string="Status")

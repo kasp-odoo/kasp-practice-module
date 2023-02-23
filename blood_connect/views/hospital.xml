@@ -43,11 +43,24 @@
                         </group>
                     </group>
                     <notebook>
-                        <page string="Patient Blood Requests">
-
-                        </page>
-                        <page string="Blood Orders">
-
+                        <!-- <page string="Patient Blood Requests">
+                            <field name="order_ids">
+                                <tree>
+                                    <field name="name" string="Title"/>
+                                    <field name="blood_group"/>
+                                    <field name="quantity"/>
+                                </tree>
+                            </field>
+                        </page> -->
+                        <page string="Blood Requests History">
+                            <field name="blood_request_ids">
+                                <tree>
+                                    <field name="requested_from"/>
+                                    <field name="quantity"/>
+                                    <field name="date"/>
+                                    <field name="state"/>
+                                </tree>
+                            </field>
                         </page>
                     </notebook>
                 </sheet>

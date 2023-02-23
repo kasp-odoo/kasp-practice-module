@@ -3,7 +3,7 @@ from . import blood_request
 from . import donor
 from . import patient
 from . import hospital
-from . import blood_order
+# from . import blood_order
 from . import blood_donation
 from . import donation_center
 from . import blood_type
