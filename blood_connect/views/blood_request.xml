@@ -1,24 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <!-- List/Tree View -->
-<!--     <record id="blood_connect_request_tree_view" model="ir.ui.view">
-        <field name="name">Blood Connect Request Tree View</field>
-        <field name="model">blood.request</field>
-        <field name="arch" type="xml">
-            <tree string="tree_view">
-                <field name="name"/>
-                <field name="address"/>
-                <field name="city"/>
-                <field name="select_state"/>
-                <field name="request_by"/>
-                <field name="blood_group"/>
-                <field name="quantity"/>
-                <field name="hospital"/>
-                <field name="date"/>
-                <field name="state"/>
-            </tree>
-        </field>
-    </record> -->
     <!-- Form View -->
     <record id="blood_connect_request_form_view" model="ir.ui.view">
         <field name="name">Blood Connect Request Form View</field>
@@ -31,16 +12,11 @@
                 <sheet>
                     <group>
                         <field name="request_by"/>
-                        <!-- <field name="name"/> -->
-                        <field name="patient_name" attrs="{'invisible':[('request_by','in',['hospital'])],'required':[('request_by','in',['patient'])]}"/>
-                        <field name="hospital_name" attrs="{'invisible':[('request_by','in',['patient'])],'required':[('request_by','in',['hospital'])]}"/>
-                        <!-- <field name="address"/> -->
-                        <!-- <field name="city"/> -->
-                        <!-- <field name="select_state" string="State"/> -->
-                        <field name="requested_from"/>
-                        <field name="blood_group"/>
+                        <field name="patient_name" attrs="{'invisible':[('request_by','=','hospital')],'required':[('request_by','=','patient')]}"/>
+                        <field name="hospital_name" attrs="{'invisible':[('request_by','=','patient')],'required':[('request_by','=','hospital')]}"/>
+                        <field name="center_name"/>
+                        <field name="blood_group" attrs="{'readonly':[('request_by','=','patient')]}"/>
                         <field name="quantity"/>
-                        <!-- <field name="hospital" domain="[('state','=',select_state)]"/> -->
                         <field name="date"/>
                     </group>
                 </sheet>

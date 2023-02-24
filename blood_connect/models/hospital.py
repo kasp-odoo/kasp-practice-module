@@ -13,16 +13,4 @@ class Hospital(models.Model):
     zip_code = fields.Char(string='Zip Code', required=True)
     contact = fields.Char(string='Contact Number', required=True)
     website = fields.Char()
-    blood_request_ids = fields.One2many('blood.request','hospital_name', readonly=True)
-
-# Patient Blood Requests Page (One2many)
-# Add Orders page (One2many)
-
-# City: The city in which the hospital is located
-# State: The state or province in which the hospital is located
-# Country: The country in which the hospital is located
-# Zip code: The zip or postal code of the hospital's location
-# Phone number: The hospital's phone number
-# Email: The hospital's email address
-# Contact person: The name of the person who should be contacted for inquiries or emergencies
-# Website: The hospital's website, if it has one.
+    blood_request_ids = fields.One2many('blood.request','hospital_name')

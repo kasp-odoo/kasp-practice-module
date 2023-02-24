@@ -5,7 +5,7 @@
         <field name="name">Blood Connect Blood Type Tree View</field>
         <field name="model">blood.type</field>
         <field name="arch" type="xml">
-            <tree string="tree_view">
+            <tree string="tree_view" editable="bottom">
                 <field name="blood_type"/>
                 <field name="description" optional="hide"/>
                 <field name="donate_blood_to"/>
@@ -21,10 +21,14 @@
             <form string="form_view">
                 <sheet>
                     <group>
-                        <field name="blood_type"/>
-                        <field name="description" optional="hide"/>
-                        <field name="donate_blood_to"/>
-                        <field name="receive_blood_from"/>
+                        <group>
+                            <field name="blood_type"/>
+                            <field name="description"/>
+                        </group>
+                        <group>
+                            <field name="donate_blood_to"/>
+                            <field name="receive_blood_from"/>
+                        </group>
                     </group>
                 </sheet>
             </form>

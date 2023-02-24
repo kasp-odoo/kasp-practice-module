@@ -46,11 +46,12 @@
                     <notebook>
                         <page string="Blood Request History">
                             <field name="blood_request_ids">
-                                <tree>
-                                    <field name="requested_from"/>
-                                    <field name="quantity"/>
+                                <tree editable="bottom">
+                                    <!-- <field name="request_by" default="patient"/> -->
+                                    <field name="order_id" attrs="{'readonly':[('state','in',['approved','cancelled'])]}"/>
+                                    <field name="quantity" attrs="{'readonly':[('state','in',['approved','cancelled'])]}"/>
                                     <field name="date"/>
-                                    <field name="state"/>
+                                    <field name="state" attrs="{'readonly':[('state','in',['requested','approved','cancelled'])]}"/>
                                 </tree>
                             </field>
                         </page>

@@ -3,8 +3,6 @@ blood_connect.access_blood_request,access_blood_request,blood_connect.model_bloo
 blood_connect.access_donor,access_donor,blood_connect.model_donor_donor,base.group_user,1,1,1,1
 blood_connect.access_patient,access_patient,blood_connect.model_patient_patient,base.group_user,1,1,1,1
 blood_connect.access_hospital,access_hospital,blood_connect.model_hospital_hospital,base.group_user,1,1,1,1
-blood_connect.access_blood_donation,access_blood_donation,blood_connect.model_blood_donation,base.group_user,1,1,1,1
 blood_connect.access_donation_center,access_donation_center,blood_connect.model_donation_center,base.group_user,1,1,1,1
 blood_connect.access_blood_type,access_blood_type,blood_connect.model_blood_type,base.group_user,1,1,1,1
-blood_connect.access_blood_inventory,access_blood_inventory,blood_connect.model_blood_inventory,base.group_user,1,1,1,1
 blood_connect.access_donation_request,access_donation_request,blood_connect.model_donation_request,base.group_user,1,1,1,1

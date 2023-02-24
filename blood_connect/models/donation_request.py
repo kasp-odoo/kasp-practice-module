@@ -11,6 +11,7 @@ class DonationRequest(models.Model):
     appointment_date = fields.Date(string='Appointment Date', required=True)
     donation_center = fields.Many2one('donation.center', string='Donation Center', required=True)
     donation_id = fields.Many2one('donation.center')
+    # center_name = 
     state = fields.Selection(
         selection = [
             ('new','New'),

@@ -18,8 +18,6 @@ class BloodType(models.Model):
             ('B-', 'B-'),
             ('AB-', 'AB-'),
         ], string='Blood Type', required=True)
-    # Code of blood group
     description = fields.Text(string='Description')
     donate_blood_to = fields.Char(string='Donate Blood To') # required=True
-    receive_blood_from = fields.Char(
-        string='Receive Blood From') # required=True
+    receive_blood_from = fields.Char(string='Receive Blood From') # required=True

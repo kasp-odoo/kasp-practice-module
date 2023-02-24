@@ -41,6 +41,7 @@
                             <field name="age"/>
                             <field name="gender"/>
                             <field name="blood_group"/>
+                            <field name="health_info"/>
                         </group>
                     </group>
                     <notebook>

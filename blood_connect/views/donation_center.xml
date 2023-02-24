@@ -49,21 +49,19 @@
                                     <field name="donor_name"/>
                                     <field name="blood_group"/>
                                     <field name="appointment_date"/>
+                                    <field name="state"/>
                                 </tree>
                             </field>
                         </page>
                         <page string="Blood Orders">
                             <field name="order_ids">
                                 <tree>
-                                    <!-- <field name="name"/> -->
+                                    <field name="request_by" default="patient"/>
                                     <field name="patient_name"/>
                                     <field name="hospital_name"/>
-                                    <field name="request_by"/>
                                     <field name="blood_group"/>
                                     <field name="quantity"/>
                                     <field name="date"/>
-                                    <!-- <field name="city"/> -->
-                                    <!-- <field name="select_state" string="State"/> -->
                                     <field name="state" string="Status"/>
                                 </tree>
                             </field>

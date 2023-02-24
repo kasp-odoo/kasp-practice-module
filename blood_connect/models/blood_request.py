@@ -10,19 +10,16 @@ class BloodRequest(models.Model):
         selection=[
             ('patient', 'Patient'),
             ('hospital', 'Hospital'),
-        ], required=True, string='Request By', default='patient')
-    # name = fields.Char(required=True)
+        ], required=True, string='Request By', default='patient') # 
     patient_name = fields.Many2one('patient.patient')
     hospital_name = fields.Many2one('hospital.hospital')
-    # address = fields.Text(required=True)
-    blood_group = fields.Many2one('blood.type', string='Blood Group', required=True)
+    blood_group = fields.Many2one('blood.type', related='patient_name.blood_group', store=True, string='Blood Group', required=True)
     quantity = fields.Integer(required=True, string='Required Blood Units', default=1)
-    # city = fields.Char()
-    # select_state = fields.Many2one('res.country.state', required=True)
-    order_id = fields.Many2one('donation.center')
-    date = fields.Date(string='Request Date', default=lambda self: fields.Date.today(), required=True)
-    requested_from = fields.Many2one('donation.center', required=True)
+    order_id = fields.Many2one('donation.center',string='Ordered From')
+    date = fields.Date(string='Request Date', default=lambda self: fields.Date.today(),readonly=True,)
+    # requested_from = fields.Many2one('donation.center', required=True, default=lambda self:)
+    center_name = fields.Char(related='order_id.name')
     state = fields.Selection(
-        selection=[('new', 'New'),
+        selection=[('requested', 'Requested'),
                    ('approved', 'Approved'),
-                   ('cancelled', 'Cancelled')], default="new", copy=False)
+                   ('cancelled', 'Cancelled')], string="Status", default="requested", copy=False)
