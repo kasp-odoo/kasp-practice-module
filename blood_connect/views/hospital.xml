@@ -46,12 +46,12 @@
                         <page string="Blood Requests History">
                             <field name="blood_request_ids">
                                 <tree editable="bottom">
-                                    <field name="request_by" attrs="{'readonly':[('state','in',['approved','cancelled'])]}" default="hospital"/>
+                                    <field name="request_by" attrs="{'readonly':[('state','in',['approved','cancelled'])]}"/>
                                     <field name="order_id" attrs="{'readonly':[('state','in',['approved','cancelled'])]}"/>
                                     <field name="blood_group" attrs="{'readonly':False}"/>
                                     <field name="quantity" attrs="{'readonly':[('state','in',['approved','cancelled'])]}"/>
                                     <field name="date"/>
-                                    <field name="state" attrs="{'readonly':[('state','in',['requested','approved','cancelled'])]}"/>
+                                    <field name="state" attrs="{'readonly':True}"/>
                                 </tree>
                             </field>
                         </page>

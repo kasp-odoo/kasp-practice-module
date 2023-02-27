@@ -18,4 +18,4 @@ class Donor(models.Model):
         ('other', 'Other')],string='Gender',required=True)
     blood_group = fields.Many2one('blood.type', string='Blood Group',required=True)
     health_info = fields.Text(string='Health Information')
-    donor_request_ids = fields.One2many('donation.request','donor_name',readonly=True)
+    donor_request_ids = fields.One2many('donation.request','donor_name')

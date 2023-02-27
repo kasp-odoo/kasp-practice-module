@@ -49,9 +49,10 @@
                                 <tree editable="bottom">
                                     <!-- <field name="request_by" default="patient"/> -->
                                     <field name="order_id" attrs="{'readonly':[('state','in',['approved','cancelled'])]}"/>
+                                    <field name="blood_group" invisible="1"/>
                                     <field name="quantity" attrs="{'readonly':[('state','in',['approved','cancelled'])]}"/>
                                     <field name="date"/>
-                                    <field name="state" attrs="{'readonly':[('state','in',['requested','approved','cancelled'])]}"/>
+                                    <field name="state" attrs="{'readonly':True}"/>
                                 </tree>
                             </field>
                         </page>

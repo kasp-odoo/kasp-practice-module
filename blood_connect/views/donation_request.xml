@@ -9,7 +9,8 @@
                 <field name="donor_name"/>
                 <field name="blood_group"/>
                 <field name="appointment_date"/>
-                <field name="donation_center"/>
+                <field name="center_id"/>
+                <!-- <button name="action_accept_donation" title="Accept" type="object" icon="fa-check" attrs="{'invisible':[('state','not in',['requested'])]}"/> -->
                 <field name="state"/>
             </tree>
         </field>
@@ -27,7 +28,7 @@
                     <group>
                         <field name="donor_name"/>
                         <field name="blood_group"/>
-                        <field name="donation_center"/>
+                        <field name="center_name"/>
                         <field name="appointment_date"/>
                     </group>
                 </sheet>

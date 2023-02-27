@@ -15,10 +15,6 @@ class DonationCenter(models.Model):
     email = fields.Char()
     capacity = fields.Integer(string='Capacity(Units)', required=True)
     available_blood = fields.Integer(string='Available Units', readonly=True)
-    blood_group = fields.Many2one('blood.type', string='Blood Group')
+    # blood_group = fields.Many2one('blood.type', string='Blood Group')
     order_ids = fields.One2many('blood.request','order_id')
-    donation_ids = fields.One2many('donation.request','donation_id')
-
-# Blood Transactions: One2many Field, to connect with Blood Transaction model and store the transactions of blood donation and delivery.
-
-# Add Blood Stock Page (Blood Type -> Blood Units available) use compute
+    donation_ids = fields.One2many('donation.request','center_id')
