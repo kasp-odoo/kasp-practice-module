@@ -47,7 +47,7 @@
                     <notebook>
                         <page string="Donation Request History">
                             <field name="donor_request_ids">
-                                <tree editable="bottom">
+                                <tree editable="bottom" decoration-primary="state=='approved'" decoration-muted="state=='rejected'" decoration-success="state=='donated'" decoration-danger="state=='not donated'">
                                     <field name="appointment_date" attrs="{'readonly':[('state','not in','requested')]}"/>
                                     <field name="center_id" attrs="{'readonly':[('state','not in','requested')]}"/>
                                     <field name="state" attrs="{'readonly':True}"/>

@@ -15,7 +15,7 @@
                         <field name="patient_name" attrs="{'invisible':[('request_by','=','hospital')],'required':[('request_by','=','patient')]}"/>
                         <field name="hospital_name" attrs="{'invisible':[('request_by','=','patient')],'required':[('request_by','=','hospital')]}"/>
                         <field name="center_name"/>
-                        <field name="blood_group"/> <!-- attrs="{'readonly':[('request_by','=','patient')]}" -->
+                        <field name="blood_group" attrs="{'readonly':[('request_by','=','patient')],'required':[('request_by','=','hospital')]}"/>
                         <field name="quantity"/>
                         <field name="date"/>
                     </group>

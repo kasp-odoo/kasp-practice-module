@@ -7,7 +7,7 @@ class DonationRequest(models.Model):
     _description = "Blood Connect Blood Donation Request Model"
 
     donor_name = fields.Many2one('donor.donor', string='Donor Name', required=True)
-    blood_group = fields.Many2one('blood.type', related='donor_name.blood_group', store=True, string='Blood Group', required=True)
+    blood_group = fields.Many2one('blood.type', related='donor_name.blood_group', store=True, string='Blood Group')
     appointment_date = fields.Datetime(string='Appointment Date', required=True)
     center_id = fields.Many2one('donation.center', string='Donation Center', required=True)
     # donation_center = fields.Many2one('donation.center')

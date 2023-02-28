@@ -46,7 +46,7 @@
                     <notebook>
                         <page string="Blood Request History">
                             <field name="blood_request_ids">
-                                <tree editable="bottom">
+                                <tree editable="bottom" decoration-success="state=='approved'" decoration-danger="state=='cancelled'">
                                     <!-- <field name="request_by" default="patient"/> -->
                                     <field name="order_id" attrs="{'readonly':[('state','in',['approved','cancelled'])]}"/>
                                     <field name="blood_group" invisible="1"/>

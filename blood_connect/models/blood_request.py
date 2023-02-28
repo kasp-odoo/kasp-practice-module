@@ -13,7 +13,7 @@ class BloodRequest(models.Model):
         ], required=True, string='Request By', default='patient')
     patient_name = fields.Many2one('patient.patient')
     hospital_name = fields.Many2one('hospital.hospital')
-    blood_group = fields.Many2one('blood.type', related='patient_name.blood_group', store=True, string='Blood Group', required=True, readonly=False) # compute='_compute_blood_group'
+    blood_group = fields.Many2one('blood.type', related='patient_name.blood_group', store=True, string='Blood Group', readonly=False) # compute='_compute_blood_group'
     quantity = fields.Integer(required=True, string='Required Blood Units', default=1)
     order_id = fields.Many2one('donation.center', string='Ordered From')
     date = fields.Date(string='Request Date', default=lambda self: fields.Date.today(),readonly=True,)
@@ -31,3 +31,13 @@ class BloodRequest(models.Model):
     #             record.blood_group = record.patient_name.mapped("blood_group")[:1]
     #         else:
     #             record.blood_group = False
+
+    def action_accept_order(self):
+        for record in self:
+            record.state = 'approved'
+        return True
+
+    def action_reject_order(self):
+        for record in self:
+            record.state = 'cancelled'
+        return True
