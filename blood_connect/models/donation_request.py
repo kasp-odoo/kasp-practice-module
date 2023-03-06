@@ -12,6 +12,7 @@ class DonationRequest(models.Model):
     center_id = fields.Many2one('donation.center', string='Donation Center', required=True)
     # donation_center = fields.Many2one('donation.center')
     center_name = fields.Char(related='center_id.name')
+    donated_units = fields.Integer(string='Donated Units', default=0)
     state = fields.Selection(
         selection = [
             ('requested','Requested'),

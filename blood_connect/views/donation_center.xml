@@ -34,12 +34,19 @@
                             <field name="city"/>
                             <field name="state"/>
                             <field name="zip_code"/>
-                        </group>
-                        <group>
                             <field name="contact"/>
                             <field name="email"/>
                             <field name="capacity"/>
-                            <field name="available_blood"/>
+                        </group>
+                        <group>
+                            <field name="a_positive"/>
+                            <field name="o_positive"/>
+                            <field name="b_positive"/>
+                            <field name="ab_positive"/>
+                            <field name="a_negative"/>
+                            <field name="o_negative"/>
+                            <field name="b_negative"/>
+                            <field name="ab_negative"/>
                         </group>
                     </group>
                     <notebook>
@@ -49,10 +56,11 @@
                                     <field name="donor_name"/>
                                     <field name="blood_group"/>
                                     <field name="appointment_date"/>
-                                    <button name="action_accept_donation" title="Accept" type="object" icon="fa-check" attrs="{'invisible':[('state','not in',['requested'])]}"/>
-                                    <button name="action_reject_donation" title="Reject" type="object" icon="fa-remove" attrs="{'invisible':[('state','not in',['requested'])]}"/>
-                                    <button name="action_donated" title="Donated" type="object" icon="fa-check" attrs="{'invisible':[('state','not in',['approved'])]}"/>
-                                    <button name="action_not_donated" title="Not Donated" type="object" icon="fa-remove" attrs="{'invisible':[('state','not in',['approved'])]}"/>
+                                    <button name="action_accept_donation" title="Accept" string="Accept" type="object" icon="fa-check" attrs="{'invisible':[('state','not in',['requested'])]}"/>
+                                    <button name="action_reject_donation" title="Reject" string="Reject" type="object" icon="fa-remove" attrs="{'invisible':[('state','not in',['requested'])]}"/>
+                                    <button name="action_donated" title="Donated" string="Donated" type="object" icon="fa-check" attrs="{'invisible':[('state','not in',['approved'])]}"/>
+                                    <button name="action_not_donated" title="Not Donated" string="Not Donated" type="object" icon="fa-remove" attrs="{'invisible':[('state','not in',['approved'])]}"/>
+                                    <field name="donated_units" attrs="{'invisible':[('state','not in','donated')]}"/>
                                     <field name="state"/>
                                 </tree>
                             </field>
@@ -66,8 +74,8 @@
                                     <field name="blood_group"/>
                                     <field name="quantity"/>
                                     <field name="date"/>
-                                    <button name="action_accept_order" title="Accept" type="object" icon="fa-check" attrs="{'invisible':[('state','not in',['requested'])]}"/>
-                                    <button name="action_reject_order" title="Reject" type="object" icon="fa-remove" attrs="{'invisible':[('state','not in',['requested'])]}"/>
+                                    <button name="action_accept_order" title="Accept" string="Accept" type="object" icon="fa-check" attrs="{'invisible':[('state','not in',['requested'])]}"/>
+                                    <button name="action_reject_order" title="Reject" string="Reject" type="object" icon="fa-remove" attrs="{'invisible':[('state','not in',['requested'])]}"/>
                                     <field name="state" string="Status"/>
                                 </tree>
                             </field>

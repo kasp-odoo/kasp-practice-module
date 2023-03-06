@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from odoo import api, fields, models
+from odoo.exceptions import ValidationError
 
 
 class BloodRequest(models.Model):
@@ -33,8 +34,22 @@ class BloodRequest(models.Model):
     #             record.blood_group = False
 
     def action_accept_order(self):
+        check_blood_groups = {
+            'A+': 'a_positive',
+            'O+': 'o_positive',
+            'AB+': 'ab_positive',
+            'B+': 'b_positive',
+            'A-': 'a_negative',
+            'O-': 'o_negative',
+            'AB-': 'ab_negative',
+            'B-': 'b_negative',
+        }
         for record in self:
-            record.state = 'approved'
+            get_blood_group = check_blood_groups.get(record.blood_group.blood_type)
+            if getattr(record.order_id, get_blood_group) > 0:
+                record.state = 'approved'
+            else:
+                raise ValidationError(f"{record.blood_group.blood_type} blood group is not available.")
         return True
 
     def action_reject_order(self):

@@ -23,15 +23,4 @@
             </form>
         </field>
     </record>
-    <!-- Action Menu -->
-    <record id="blood_connect_request_action" model="ir.actions.act_window">
-        <field name="name">Blood Requests</field>
-        <field name="res_model">blood.request</field>
-        <field name="view_mode">tree,form</field>
-        <field name="help" type="html">
-            <p class="o_view_nocontent_smiling_face">
-                There is no new blood request!!
-            </p>
-        </field>
-    </record>
 </odoo>
